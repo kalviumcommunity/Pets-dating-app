@@ -17,3 +17,13 @@ Responsive Design: Ensure the app is mobile-friendly and responsive, as users ma
 Notifications: Set up push notifications to alert users about new matches, messages, or upcoming playdates.
 
 Silly Features: Add quirky elements to the app, such as pet horoscopes, silly pet jokes, or virtual pet games.
+
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/yourusername/pet-dating-app.git`
+2. Navigate to the project directory: `cd pet-dating-app`
+3. Install dependencies: `npm install`
+4. Start the app: `npm start`
