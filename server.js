@@ -7,5 +7,9 @@ app.get('/ping', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    try {
+        console.log(`Server is running on port ${PORT}`); 
+    } catch (error) {
+        console.log(error)
+    }
 });
