@@ -46,3 +46,5 @@ To run this project locally, follow these steps:
 4. Start the app: `npm start`
 
 Join the Pets Dating App community today and let the paw-sibilities of pet companionship unfold!
+
+[Visit My Deployed App](https://pets-dating-app.onrender.com/ping)
