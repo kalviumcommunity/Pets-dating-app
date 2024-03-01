@@ -1,0 +1,73 @@
+[
+    {
+      "image": "pet1_image_url.jpg",
+      "name": "Fluffy",
+      "breed": "Persian Cat",
+      "age": 3,
+      "location": "City A"
+    },
+    {
+      "image": "pet2_image_url.jpg",
+      "name": "Whiskers",
+      "breed": "Siamese Cat",
+      "age": 2,
+      "location": "City B"
+    },
+    {
+      "image": "pet3_image_url.jpg",
+      "name": "Buddy",
+      "breed": "Golden Retriever",
+      "age": 4,
+      "location": "City C"
+    },
+    {
+      "image": "pet4_image_url.jpg",
+      "name": "Mittens",
+      "breed": "Maine Coon",
+      "age": 1,
+      "location": "City A"
+    },
+    {
+      "image": "pet5_image_url.jpg",
+      "name": "Oreo",
+      "breed": "Dalmatian",
+      "age": 2,
+      "location": "City B"
+    },
+    {
+      "image": "pet6_image_url.jpg",
+      "name": "Luna",
+      "breed": "Husky",
+      "age": 3,
+      "location": "City C"
+    },
+    {
+      "image": "pet7_image_url.jpg",
+      "name": "Simba",
+      "breed": "Bengal Cat",
+      "age": 1,
+      "location": "City A"
+    },
+    {
+      "image": "pet8_image_url.jpg",
+      "name": "Rocky",
+      "breed": "Labrador Retriever",
+      "age": 2,
+      "location": "City B"
+    },
+    {
+      "image": "pet9_image_url.jpg",
+      "name": "Cleo",
+      "breed": "Ragdoll Cat",
+      "age": 4,
+      "location": "City C"
+    },
+    {
+      "image": "pet10_image_url.jpg",
+      "name": "Max",
+      "breed": "German Shepherd",
+      "age": 3,
+      "location": "City A"
+    }
+  ]
+  
