@@ -2,8 +2,8 @@ const express = require('express');
 const cors=require('cors')
 const { connection } = require('./config/db');
 const { petsModel } = require('./model/pets.model');
-const data = require("./Data/data.json");
-const { router } = require('./Routes/routes');
+const data = require("./data.json");
+const { router } = require('./routes/routes');
 const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
