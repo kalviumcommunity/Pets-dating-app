@@ -1,0 +1,23 @@
+meta {
+  name: put request
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:7007/routes/Update/65e1956253a2e75ed3c72eb0
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+        
+        "image": "pet11_image_url.jpg",
+        "name": "charlie",
+        "breed": "German Shepherd",
+        "age": 3,
+        "location": "City A"
+        
+      }
+}
