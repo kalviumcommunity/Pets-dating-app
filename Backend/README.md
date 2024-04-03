@@ -49,4 +49,4 @@ Join the Pets Dating App community today and let the paw-sibilities of pet compa
 
 [Visit My Deployed App](https://pets-dating-app.onrender.com/ping)
 
-deploy-link:https://660a49dc75d7e15f413c802a--inspiring-puppy-ef7822.netlify.app/
+deploy-link:https://660a49dc75d7e15f413c802a--inspiring-puppy-ef7822.netlify.app/   
