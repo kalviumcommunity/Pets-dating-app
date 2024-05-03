@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   function getData(){
-    axios.get("http://localhost:3000/ping").then((res)=>{
+    axios.get("http://localhost:7007/ping").then((res)=>{
     console.log(res);
     })
 
