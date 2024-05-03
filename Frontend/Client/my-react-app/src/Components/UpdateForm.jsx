@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-
-const Form = () => {
+import { useParams } from 'react-router-dom'
+const UpdateForm = () => {
     const [name,setName]=useState()
+    const id = useParams()
+    console.log(id)
     const [image,setImage]=useState()
     const [breed,setBreed]=useState()
     const [age,setAge]=useState()
@@ -14,7 +16,7 @@ const Form = () => {
             age:age,
         }
     try {
-        axios.post("http://localhost:7007/routes/Create",obj)
+        axios.put(`http://localhost:7007/routes/Update/${id.id}`,obj)
     } catch (error) {
         console.log(error)
     }
@@ -31,4 +33,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default UpdateForm
