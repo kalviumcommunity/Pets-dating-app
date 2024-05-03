@@ -1,33 +1,26 @@
 import React, { useEffect, useState } from 'react'
 
 const Card = (props) => {
-  const[petsData,setPetsData]=useState(null)
-  const{pets}=props
-  console.log(props.props.pets)
-  useEffect(()=>{
-    setPetsData(props.props.pets)
-  },[])
+  // const[petsData,setPetsData]=useState(null)
+  const{image,name,breed,age}=props.props
+  console.log(props)
   return (
     <div>
       <div className='main'>
      
-      {petsData && petsData.length>0 && petsData.map(ele=>{
-        return(
+      
           <div className='container'>
       <div className='pet1'> 
-        <img className='image1' src={ele.image}	 alt="image-1" />
-  <h3>{ele.name}</h3>
-  <h3>{ele.breed}</h3>
-  <h3>{ele.age}</h3>
-  <h3>{ele.location}</h3>
+        <img className='image1' src={image} alt="image-1" />
+  <h3>{name}</h3>
+  <h3>{breed}</h3>
+  <h3>{age}</h3>
       </div>
       
       
       
       </div>
-        )
-      })}
-     
+       
       
      
 
