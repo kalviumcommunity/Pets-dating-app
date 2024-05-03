@@ -15,11 +15,8 @@ const petSchema = new mongoose.Schema({
   age: {
     type: Number,
     required: true
-  },
-  location: {
-    type: String,
-    required: true
   }
+  
 })
 
 const petsModel = mongoose.model("pets" , petSchema)
