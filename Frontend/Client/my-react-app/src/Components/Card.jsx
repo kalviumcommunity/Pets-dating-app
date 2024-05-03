@@ -1,31 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Card = () => {
+const Card = (props) => {
+  const[petsData,setPetsData]=useState(null)
+  const{pets}=props
+  console.log(props.props.pets)
+  useEffect(()=>{
+    setPetsData(props.props.pets)
+  },[])
   return (
     <div>
       <div className='main'>
-      <h1 className='heading'>Pets Dating App</h1>
      
-      <div className='container'>
+      {petsData && petsData.length>0 && petsData.map(ele=>{
+        return(
+          <div className='container'>
       <div className='pet1'> 
-        <img className='image1' src="https://plus.unsplash.com/premium_photo-1683134036144-82b0a3d50f11?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFicmFkb3IlMjByZXRyaWV2ZXJ8ZW58MHx8MHx8fDA%3D									
-" alt="image-1" />
-  <h3>Max</h3>
-  <h3>Labrador Retriever</h3>
-  <h3>3 years</h3>
-  <h3>~jaipur</h3>
+        <img className='image1' src={ele.image}	 alt="image-1" />
+  <h3>{ele.name}</h3>
+  <h3>{ele.breed}</h3>
+  <h3>{ele.age}</h3>
+  <h3>{ele.location}</h3>
       </div>
       
       
-      <div className='pet2'>
-        <img className='image2' src="https://images.unsplash.com/photo-1611305366162-ce5d41340817?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJlYWdsZSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D
-" alt="image-2" />
-  <h3>Olivia</h3>
-  <h3>Beagle</h3>
-  <h3>2 years</h3>
-  <h3>~jaipur</h3>
+      
       </div>
-      </div>
+        )
+      })}
+     
+      
      
 
     
