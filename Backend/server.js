@@ -7,9 +7,21 @@ const { router } = require('./routes/routes');
 const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
+const Joi = require('joi');
 
 app.use(express.json());
 app.use(cors());
+
+
+const postSchema=Joi.object({
+    image:Joi.string().required(),
+      name:Joi.string().required() ,
+      breed:Joi.string().required(),
+      age:Joi.number().required() 
+})
+
+
+
 
 app.get('/ping', (req, res) => {
     res.send('Pong!');
@@ -17,11 +29,19 @@ app.get('/ping', (req, res) => {
 
 
 app.post('/postAllData',async (req,res)=>{
-    try{
-        await petsModel.insertMany(data)
-    }catch(error){
-        console.log(error)
+    let payload = req.body;
+    const {error,value}=postSchema.validate(payload);
+    if (error){
+        res.json({"msg":"validation failed"})
+    }else{
+        try{
+            let result=await petsModel.create(payload)
+            res.json({msg:"Posted the document and signup successfully"})
+        }catch(error){
+            res.json({msg:"something went wrong"})
+        }
     }
+   
 });
 
 
