@@ -15,7 +15,11 @@ const petSchema = new mongoose.Schema({
   age: {
     type: Number,
     required: true
-  }
+  },
+  created_by: {
+    type: String,
+    
+}
   
 })
 

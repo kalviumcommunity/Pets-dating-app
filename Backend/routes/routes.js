@@ -8,13 +8,26 @@ var jwt = require('jsonwebtoken');
 
 
 router.get("/getAllData", async(req,res)=>{
-    try{
-        let result =await petsModel.find()
-        res.json({message:"successfully fetched the data", data:result})
-    }catch(error){
-        console.log(error)
-        res.send({error})
+    const user = req.query
+    console.log(user)
+    if (user.user){
+        try{
+            let result =await petsModel.find({created_by:user.user})
+            res.json({message:"successfully fetched the data", data:result})
+        }catch(error){
+            console.log(error)
+            res.send({error})
+        }
+    }else{
+        try{
+            let result =await petsModel.find()
+            res.json({message:"successfully fetched the data", data:result})
+        }catch(error){
+            console.log(error)
+            res.send({error})
+        }
     }
+   
 })
 
 
