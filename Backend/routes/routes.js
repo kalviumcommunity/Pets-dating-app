@@ -2,8 +2,9 @@
 const express = require('express');
 const { petsModel } = require('../model/pets.model');
 const { UserModel } = require('../model/UserModel');
-const { Token } = require('@mui/icons-material');
 const router= express.Router();
+
+var jwt = require('jsonwebtoken');
 
 
 router.get("/getAllData", async(req,res)=>{
@@ -72,7 +73,8 @@ router.post('/login' , async(req,res)=>{
        let user= await UserModel.findOne({email})
       if(user){
         if(user.password==password){
-            res.send({message:"login successful!",Token:user.email})
+            var token = jwt.sign(user.email,'Yash');
+            res.send({message:"login successful!",Token:token})
            }else{
             res.send({message:"password is incorrect"})
            }

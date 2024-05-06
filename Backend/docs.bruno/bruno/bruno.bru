@@ -5,7 +5,15 @@ meta {
 }
 
 post {
-  url: http://localhost:5173/postAllData
-  body: none
+  url: http://localhost:8008/postAllData
+  body: json
   auth: none
+}
+
+body:json {
+   { "image": "https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2lhbWVzZSUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D",
+        "name": "Whiskers",
+        "breed": "Siamese Cat",
+        "age": 21
+          }
 }
