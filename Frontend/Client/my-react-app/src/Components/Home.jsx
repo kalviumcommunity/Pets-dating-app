@@ -8,7 +8,7 @@ const Home = () => {
     const [data, setData] = useState(null)
 
     function getData(){
-      axios.get("http://localhost:7007/routes/getAllData").then((res)=>{
+      axios.get("http://localhost:8008/routes/getAllData").then((res)=>{
       console.log(res);
       setData(res.data.data);
       })

@@ -9,7 +9,7 @@ const Card = (props) => {
   console.log(props)
   const handleDelete=async(id)=>{
     try {
-      axios.delete(`http://localhost:7007/routes/Delete/${id}`)
+      axios.delete(`http://localhost:8008/routes/Delete/${id}`)
     } catch (error) {
       console.log(error)
     }

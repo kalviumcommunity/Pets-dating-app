@@ -1,6 +1,8 @@
 
 const express = require('express');
 const { petsModel } = require('../model/pets.model');
+const { UserModel } = require('../model/UserModel');
+const { Token } = require('@mui/icons-material');
 const router= express.Router();
 
 
@@ -51,5 +53,46 @@ router.delete('/Delete/:id' , async(req,res)=>{
         res.send(error)
     }
 })
+
+router.post('/signup' , async(req,res)=>{
+    let payload = req.body
+    try {
+        await UserModel.create(payload)
+        res.send({message:"account craeted successfully!"})
+    } catch (error) {
+        console.log(error)
+        res.send(error)
+    }
+})
+
+
+router.post('/login' , async(req,res)=>{
+    let {email,password} = req.body
+    try {
+       let user= await UserModel.findOne({email})
+      if(user){
+        if(user.password==password){
+            res.send({message:"login successful!",Token:user.email})
+           }else{
+            res.send({message:"password is incorrect"})
+           }
+      }else{
+        res.send({message:"user does not exist"})
+      }
+      
+       
+    } catch (error) {
+        console.log(error)
+        res.send(error)
+    }
+})
+
+
+router.post('/logout' , async(req,res)=>{
+    res.send({message:"logout successful!"})
+   
+})
+
+
 
 module.exports={router} 
