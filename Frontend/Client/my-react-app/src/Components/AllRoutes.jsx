@@ -3,8 +3,9 @@ import { Routes,Route,  } from 'react-router-dom'
 import Home from './Home'
 import Form from './Form'
 import UpdateForm from './UpdateForm'
-import LoginForm from './LoginForm'
 import Logout from './Logout'
+import LoginForm from './LoginForm'
+
 const AllRoutes = () => {
   return (
     <Routes>
